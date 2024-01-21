@@ -1,9 +1,8 @@
 ---
-title: "Presentation Ninja"
-subtitle: "⚔<br/>with xaringan"
-author: "Yihui Xie"
-institute: "RStudio, PBC"
-date: "2016/12/12 (updated: `r Sys.Date()`)"
+title: "CASA0023"
+subtitle: "learning diary wk2"
+author: "Lunan Wei"
+date: "2024/1/21"
 output:
   xaringan::moon_reader:
     lib_dir: libs
@@ -11,7 +10,15 @@ output:
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
+
 ---
+# Summary
+
+
+## Sentinel-2A
+
+Sentinel-2A is part of the Copernicus Programme, which is a cornerstone of Europe's Earth observation efforts. The Sentinel-2A satellite was launched on June 23, 2015, and it works in tandem with its twin, Sentinel-2B, to provide high-resolution optical imagery for land monitoring.
+
 
 background-image: url(https://upload.wikimedia.org/wikipedia/commons/b/be/Sharingan_triple.svg)
 
@@ -19,9 +26,135 @@ background-image: url(https://upload.wikimedia.org/wikipedia/commons/b/be/Sharin
 options(htmltools.dir.version = FALSE)
 ```
 
-???
+
 
 Image credit: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Sharingan_triple.svg)
+
+---
+# Summary
+
+## Key features and capabilities
+
+Multi-Spectral Imaging: Sentinel-2A is equipped with a multi-spectral imager that can capture data in 13 spectral bands.
+
+
+High Resolution: The satellite provides images with a high spatial resolution of 10, 20, or 60 meters, depending on the spectral band.
+
+
+
+Frequent Revisits: The Sentinel-2 mission (combining 2A and 2B) provides frequent revisit times, with the same area being covered every five days at the equator.
+
+Coverage: all continental land surfaces (including inland waters) between latitudes 56° South and 82.8° North, all coastal waters up to 20 km from the shore, all islands greater than 100 km2, all EU islands, the Mediterranean Sea, all closed seas (e.g. Caspian Sea).
+
+---
+# Summary
+
+## Available Bands and Data
+
+Name	Description	Resolution
+B01	Coastal aerosol, 442.7 nm (S2A), 442.3 nm (S2B)	60m
+B02	Blue, 492.4 nm (S2A), 492.1 nm (S2B)	10m
+B03	Green, 559.8 nm (S2A), 559.0 nm (S2B)	10m
+B04	Red, 664.6 nm (S2A), 665.0 nm (S2B)	10m
+B05	Vegetation red edge, 704.1 nm (S2A), 703.8 nm (S2B)	20m
+B06	Vegetation red edge, 740.5 nm (S2A), 739.1 nm (S2B)	20m
+B07	Vegetation red edge, 782.8 nm (S2A), 779.7 nm (S2B)	20m
+B08	NIR, 832.8 nm (S2A), 833.0 nm (S2B)	10m
+B8A	Narrow NIR, 864.7 nm (S2A), 864.0 nm (S2B)	20m
+B09	Water vapour, 945.1 nm (S2A), 943.2 nm (S2B)	60m
+B11	SWIR, 1613.7 nm (S2A), 1610.4 nm (S2B)	20m
+B12	SWIR, 2202.4 nm (S2A), 2185.7 nm (S2B)	20m
+AOT	Aerosol Optical Thickness map, based on Sen2Cor processor	10m
+SCL	Scene classification data, based on Sen2Cor processor, codelist	20m
+SNW	Snow probability, based on Sen2Cor processor	20m
+CLD	Cloud probability, based on Sen2Cor processor	20m
+CLP	Cloud probability, based on s2cloudless (more)	160m
+CLM	Cloud masks (more)	160m
+sunAzimuthAngles	Sun azimuth angle	5000m
+sunZenithAngles	Sun zenith angle	5000m
+viewAzimuthMean	Viewing azimuth angle	5000m
+viewZenithMean	Viewing zenith angle	5000m
+dataMask	The mask of data/no data pixels (more).	N/A*
+
+
+---
+# Study Case
+
+
+
+
+
+---
+# Study Case
+
+
+
+
+
+---
+#reflection 
+
+
+
+---
+#Words Explanation
+
+AOT: Aerosol Optical Thickness
+
+SNAP: Sentinels Application Platform
+
+BOA: Bottom of Atmosphere
+
+TOA: Top of Atmosphere
+
+TCI: True Color Index.
+
+B02 (Blue), B03 (Green), and B04 (Red) 
+
+SNAP: Sentinels Application Platform. 
+A collection of toolboxes specifically for pre-processing and analysing remotely sensed data.
+
+NDVI: Normalized Difference Vegetation Index.
+NDVI values range from -1 to +1. A high NDVI value (closer to +1) indicates high levels of live green vegetation, while low NDVI values (closer to -1) suggest the absence of green vegetation, indicating barren areas, snow, water, etc.
+
+
+WV: Water Vapour
+
+
+---
+
+
+# Band Combinations
+
+The false colour composite: B8, B4, B3. Plants reflect near-infrared and green light whilst absorbing red.
+
+Atmospheric penetration composite: B12, B11, B8A with no visible bands to penetrate atmospheric particles. Vegetation = blue, urban area = white, gray cyan or purple.
+
+
+The short-wave infrared composite: B12, B8A and B4 shows vegetation in green, the darker the greener the denser it is and brown shows built up or bare soil.
+
+
+
+
+---
+
+#Copernicus Programme
+
+
+Vision: Providing accurate, timely and easily accessible information to improve the management of the environment, understand and mitigate the effects of climate change and ensure civil security, Copernicus is the most ambitious Earth observation programme to date.
+
+Application: Climate change, Land and cost monitoring, Temperature and Wildfire, Agriculture and foot security, Disaster monitoring (Volcano, Earthquake), Airpolution
+
+
+---
+
+https://sentiwiki.copernicus.eu/web/sentinel-2
+
+
+
+---
+
+
 
 ---
 class: center, middle
